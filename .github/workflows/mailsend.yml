@@ -16,12 +16,12 @@ jobs:
             - name: Send Email
               uses: hilarion5/send-mail@v1
               with:
-                smtp-server: smtp.example.com
+                smtp-server: smtp.gmail.com
                 smtp-port: 465
                 smtp-secure: true
-                from-email: ${{secrets.ACCOUNT}}
+                from-email: ${{ secrets.ACCOUNT }}
                 to-email: writemeajithak@gmail.com
-                username: ${{secrets.ACCOUNT}}
-                password: ${{secrets.MAIL_PASSWORD}}
+                username: ${{ secrets.ACCOUNT }}
+                password: ${{ secrets.MAIL_PASSWORD }}
                 subject: Test Email
                 body: This is a test email sent from GitHub Actions.
