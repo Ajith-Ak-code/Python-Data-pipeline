@@ -1,0 +1,19 @@
+name: schedule by cronjob
+
+on:
+    schedule:
+        - cron: '*/2 * 6 * 1-5'
+
+jobs:
+    cronworkflow:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: clone rep
+              uses: actions/checkout@v4
+            - name: python installation
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.13' 
+            - name: Run python script
+              run: app.py
