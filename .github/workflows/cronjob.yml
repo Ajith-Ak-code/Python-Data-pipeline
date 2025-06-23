@@ -2,7 +2,7 @@ name: schedule by cronjob
 
 on:
     schedule:
-        - cron: '*/2 * * 6 1-5'
+        - cron: '*/2 * 30 6 6'
 
 jobs:
     cronworkflow:
